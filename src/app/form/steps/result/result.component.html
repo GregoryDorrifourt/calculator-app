@@ -1,0 +1,23 @@
+<h2 class="title is-4 has-text-centered">Merci {{civility}} {{formData?.lastname}} {{formData?.firstname}},</h2>
+<div class="has-text-centered">
+  <ng-container *ngIf="isEligible; else isNotEligible">
+    <p>
+      Félicitations!<br> Votre projet sera financé à hauteur de
+      <span class="is-block subtitle is-2">{{effyHelp}}€</span>
+    </p>
+    <div class="field">
+      <div class="control has-text-centered">
+        <button class="button is-primary" role="button" (click)="reset()">Modifier ma simulation</button>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #isNotEligible>
+    <p>Malheureusement, vous n'êtes pas éligible aux aides.</p>
+    <div class="field">
+      <div class="control has-text-centered">
+        <button class="button is-primary" role="button" (click)="reset()">Modifier mon projet</button>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
