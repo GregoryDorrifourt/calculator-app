@@ -1,9 +1,9 @@
-import {FormService} from "../services/form.service";
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {Directive} from "@angular/core";
+import { FormService } from "../services/form.service";
+import { FormBuilder, FormGroup } from "@angular/forms";
+import { Directive } from "@angular/core";
 
 @Directive()
-export class StepClass {
+export class StepDirective {
 
   public formGroup: FormGroup | undefined;
 
