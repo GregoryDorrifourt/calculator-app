@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CivilityLabel, STEP} from "../../form.constants";
-import {StepClass} from "../step.class";
-import {FormGroup, Validators} from "@angular/forms";
+import { STEP } from "../../form.constants";
+import { StepClass } from "../step.class";
+import { FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-owner-step',

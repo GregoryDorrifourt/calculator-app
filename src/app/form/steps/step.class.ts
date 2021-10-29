@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 import { Directive } from "@angular/core";
 
 @Directive()
-export class StepDirective {
+export class StepClass {
 
   public formGroup: FormGroup | undefined;
 

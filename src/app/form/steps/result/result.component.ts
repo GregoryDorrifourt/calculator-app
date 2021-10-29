@@ -23,17 +23,14 @@ export class ResultComponent extends StepClass implements OnInit {
   ngOnInit(): void {
     this.formService.setCurrentStep(STEP.RESULT);
     this.formData = this.formService.getFormData().data;
-    console.log('formData : ', this.formData);
 
     if (this.formData.owner) {
       const projectCost: number = (Number(this.formData.surface) * this.pricePerM2);
       const income: number = Number(this.formData.income);
-      const effyHelp = (projectCost*0.75)-((income/Number(this.formData.peopleInHouse))*0.15);
+      const _effyHelp: number = (projectCost*0.75)-((income/Number(this.formData.peopleInHouse))*0.15);
 
-      this.effyHelp = ((projectCost*0.75)-((income/Number(this.formData.peopleInHouse))*0.15)).toFixed(2)
-
-      this.isEligible = (effyHelp > 0);
-
+      this.effyHelp = _effyHelp.toFixed(2)
+      this.isEligible = (_effyHelp > 0);
     } else {
       this.isEligible = false;
     }
